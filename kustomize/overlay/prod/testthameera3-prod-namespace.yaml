@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: testthameera3-prod
+  labels:
+    environment-id: env_79f96a17-25c1-488d-b845-d8dd854c2e92
+    project-id: project_ab141b56-a92f-4f7e-8619-21975add4a0e
+    project-name: testThameera3
+    environment-name: prod
+    organization-id: org_868a1fb2-9728-4c44-b9b4-88742ac7fd14
