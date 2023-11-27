@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: testprothameera-prod
+  labels:
+    environment-id: env_680353b0-424b-4936-af25-e6356a39c6f0
+    project-id: project_bdbc1817-8f27-46c9-9619-1037f88ba00c
+    project-name: testProThameera
+    environment-name: prod
+    organization-id: org_1228d3e1-6b7e-4820-97f5-d9bc2cc5e4cf
