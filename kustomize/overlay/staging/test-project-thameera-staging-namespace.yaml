@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test-project-thameera-staging
+  labels:
+    environment-id: env_28692e71-5317-4748-9718-730b2d1764b5
+    project-id: project_8f8d485e-68f3-4bb6-9c53-3bfb0aea8806
+    project-name: test project thameera
+    environment-name: staging
+    organization-id: org_fc18b32c-00a4-49d7-94ab-ee96b2c9569d
