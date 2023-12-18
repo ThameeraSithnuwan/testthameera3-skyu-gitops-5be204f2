@@ -32,15 +32,16 @@ spec:
   labels:
     app: test-app
     version: v1.0.0
-    applicationId: app_58859dab-9204-4d7a-85f2-c8ffa2a5fd5c
+    applicationId: app_70bdb12f-ffba-4ce0-acf7-3435efe59655
     projectId: project_8f8d485e-68f3-4bb6-9c53-3bfb0aea8806
     organizationId: org_fc18b32c-00a4-49d7-94ab-ee96b2c9569d
     environmentId: env_28692e71-5317-4748-9718-730b2d1764b5
     environmentName: staging
   horizontalAutoScalingRules: []
   volumes: []
-  type: Deployment
+  type: CronJob
   name: test app
+  cronTab: 30 2 * * 5
   serviceType: ClusterIP
   version: v1.0.0
   namespace: test-project-thameera-staging

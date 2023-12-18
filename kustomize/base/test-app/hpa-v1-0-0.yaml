@@ -1,16 +1,28 @@
-apiVersion: autoscaling/v2
-kind: HorizontalPodAutoscaler
+apiVersion: batch/v1
+kind: CronJob
 metadata:
-  annotations: {}
-  name: test-app-v1-0-0
+  annotations:
+    reloader.stakater.com/auto: 'true'
   labels:
-    app: test-app-v1-0-0
-    applicationId: app_58859dab-9204-4d7a-85f2-c8ffa2a5fd5c
-    version: v1.0.0
     organizationId: org_fc18b32c-00a4-49d7-94ab-ee96b2c9569d
     projectId: project_8f8d485e-68f3-4bb6-9c53-3bfb0aea8806
+    applicationId: app_70bdb12f-ffba-4ce0-acf7-3435efe59655
+    version: v1.0.0
+  name: test-app-v1-0-0
 spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: test-app-v1-0-0
+  jobTemplate:
+    metadata:
+      annotations: 'null'
+      labels:
+        organizationId: org_fc18b32c-00a4-49d7-94ab-ee96b2c9569d
+        projectId: project_8f8d485e-68f3-4bb6-9c53-3bfb0aea8806
+        applicationId: app_70bdb12f-ffba-4ce0-acf7-3435efe59655
+        version: v1.0.0
+    spec:
+      template:
+        metadata:
+          labels:
+            organizationId: org_fc18b32c-00a4-49d7-94ab-ee96b2c9569d
+            projectId: project_8f8d485e-68f3-4bb6-9c53-3bfb0aea8806
+            applicationId: app_70bdb12f-ffba-4ce0-acf7-3435efe59655
+            version: v1.0.0
