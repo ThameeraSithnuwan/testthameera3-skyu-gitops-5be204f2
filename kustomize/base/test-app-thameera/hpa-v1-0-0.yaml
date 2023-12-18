@@ -1,0 +1,16 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations: {}
+  name: test-app-thameera-v1-0-0
+  labels:
+    app: test-app-thameera-v1-0-0
+    applicationId: app_887dd13d-861e-442b-9f82-53b7ef85b108
+    version: v1.0.0
+    organizationId: org_fc18b32c-00a4-49d7-94ab-ee96b2c9569d
+    projectId: project_8f8d485e-68f3-4bb6-9c53-3bfb0aea8806
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: test-app-thameera-v1-0-0
