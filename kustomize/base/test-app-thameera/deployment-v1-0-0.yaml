@@ -1,43 +1,28 @@
 {
-  "applicationContainers": [
-    {
-      "imageTag": "latest",
-      "cpuRequestMili": 100,
-      "cpuLimitMili": 150,
-      "memoryRequestMb": 350,
-      "memoryLimitMb": 450,
-      "args": [],
-      "command": [],
-      "configMounts": [],
-      "applicationPorts": [],
-      "healthChecks": [],
-      "name": "test-app-thameera-main",
-      "imagePullPolicy": "Always",
-      "imageRegistry": "test-url/hello-world",
-      "imagePullSecretName": "imagepull-docker",
-      "credentialId": "credential_5c97df24-b0f9-443c-92af-ebca4371e065"
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": {
+    "name": "test-app-thameera-v1-0-0",
+    "labels": {
+      "app": "test-app-thameera-v1-0-0",
+      "applicationId": "app_887dd13d-861e-442b-9f82-53b7ef85b108",
+      "version": "v1.0.0",
+      "organizationId": "org_fc18b32c-00a4-49d7-94ab-ee96b2c9569d",
+      "projectId": "project_8f8d485e-68f3-4bb6-9c53-3bfb0aea8806"
     }
-  ],
-  "minReplicas": 1,
-  "maxReplicas": 1,
-  "terminationGracePeriodSeconds": 60,
-  "nodeSelector": {},
-  "suspend": false,
-  "ttlSecondsAfterFinished": 0,
-  "labels": {
-    "app": "test-app-thameera",
-    "version": "v1.0.0",
-    "applicationId": "app_4306d64e-5d77-4b7d-b9c6-bd90bb142c9f",
-    "projectId": "project_58af4ede-9e53-46fa-89e3-7407a1cdf0f5",
-    "organizationId": "org_83167af8-ae98-451b-972e-dca861896824",
-    "environmentId": "env_aeff5472-5348-4043-9967-a57315ef46ae",
-    "environmentName": "dev"
   },
-  "horizontalAutoScalingRules": [],
-  "volumes": [],
-  "type": "Deployment",
-  "name": "test app thameera",
-  "serviceType": "ClusterIP",
-  "version": "v1.0.0",
-  "namespace": "centipede-dev"
+  "spec": {
+    "selector": {
+      "matchLabels": {
+        "app": "test-app-thameera-v1-0-0"
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "test-app-thameera-v1-0-0"
+        }
+      }
+    }
+  }
 }
