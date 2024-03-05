@@ -14,7 +14,7 @@
   "spec": {
     "selector": {
       "matchLabels": {
-        "app": "test-app-thameera-v1-0-0"
+        "app": "test-abe-thameera-v1-0-0"
       }
     },
     "template": {
