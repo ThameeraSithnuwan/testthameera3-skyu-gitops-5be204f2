@@ -14,7 +14,7 @@
   },
   "spec": {
     "scaleTargetRef": {
-      "apiVersion": "apps/v1",
+      "apiVersion": "bahahaha",
       "kind": "Deployment",
       "name": "test-app-thameera-v1-0-0"
     }
