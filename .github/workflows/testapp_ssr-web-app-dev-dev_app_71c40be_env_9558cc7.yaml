@@ -10,7 +10,7 @@ name: testapp_ssr-web-app-dev-dev_app_71c40be_env_9558cc7 Pipeline (Skyu Generat
       - README.md
   workflow_dispatch: {}
   repository_dispatch:
-    types: pipeline_37da8e95-f805-4527-9efa-3e9fc9e2d830
+    types: pipeline_e919556f-97ac-40fb-92f2-458d8ad7247e
 env:
   ENCODED_PIPELINE_SECRET: >-
     ${{secrets.TESTTHAMEERA3SKYUGITOPS5BE204F2_TESTAPP_SSRWEBAPPDEVDEV_APP_71C40BE_ENV_9558CC7}}
